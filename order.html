@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Order</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/resultpart.css" type="text/css">
+  </head>
+  <body>
+    <div class="home">
+      <div class="header1">
+        <a href="ufo.html"><img src="img/ufo(1).png">
+        </a> 
+      </div>
+      <div class="container">
+        <!-- 메뉴 시작 -->
+        <main>
+          <!-- 상단메뉴 -->
+          <input type="radio" id="burger" name="cast" checked />
+          <input type="radio" id="drink" name="cast" />
+          <input type="radio" id="side" name="cast" />
+
+          <div class="buttons_top">
+            <label for="burger">버거</label>
+            <label for="drink">음료</label>
+            <label for="side">사이드</label>
+          </div>
+
+          <!-- 버거 메뉴판 -->
+          <section class="burger">
+            <!-- 메뉴 이미지들과 설명 -->
+            <div class="menu_card" id="burger1" onclick="buy(this);">
+              <img src="img/burger/burger1.png" />
+              <div class="menu_caption">
+                <h2>군대리아버거 3,5</h2>
+                <p>
+                  부드러운 브리오슈번 속 달콤한 딸기잼, 신선한 양배추, 고소한 패티, 대한민국 국군장병이 사랑한 추억의 그 버거
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="burger2" onclick="buy(this);">
+              <img src="img/burger/burger2.png" />
+              <div class="menu_caption">
+                <h2>춘천닭갈비버거 6,9</h2>
+                <p>
+                  빨간 맛에 열광하는 대한민국 사람들을 위하여!<br>
+                  화끈하게 매운 칠리소스와 리얼 춘천닭갈비의 기막힌 컬레버레이션
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="burger3" onclick="buy(this);">
+              <img src="img/burger/burger3.png" />
+              <div class="menu_caption">
+                <h2>광양불고기버거 6,9</h2>
+                <p>
+                  지금까지의 불고기버거는 패티와 불고기'향' 소스에 불과했다.<br>
+                  전통 광양 대가집 비법으로 만든 '진짜불고기'가 들어간 리얼불고기버거
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="burger4" onclick="buy(this);">
+              <img src="img/burger/burger4.png" />
+              <div class="menu_caption">
+                <h2>유학생치즈버거 6,9</h2>
+                <p>
+                  고소한 체다치즈 3장을 겹겹이 쌓아 호주산 와규 수제패티에 녹인 진한 치즈버거<br>
+                  전 세계적으로 사랑받는 오리지널 치즈버거
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="burger5" onclick="buy(this);">
+              <img src="img/burger/burger5.png" />
+              <div class="menu_caption">
+                <h2>늑대치킨버거 6,9</h2>
+                <p>
+                  브리오슈번 속 부드러운 치킨 통가슴살 한가득, 스리라챠 핫 칠리소스의 감칠맛 한가득
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="burger6" onclick="buy(this);">
+              <img src="img/burger/burger6.png" />
+              <div class="menu_caption">
+                <h2>호텔조식버거 6,9</h2>
+                <p>
+                  스크램블에그 + 계란후라이 + 베이컨<br>
+                  든든한 특급호텔 조식버거, 아메리칸 블랙퍼스트
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="burger7" onclick="buy(this);">
+              <img src="img/burger/burger7.png" />
+              <div class="menu_caption">
+                <h2>쉡&쉡버거 6,9</h2>
+                <p>
+                  국가대표 쉐프와 UFO의 콜라보, 통새우로 만든 수제패티와 3대진미 트러플오일이 들어간 트러플버섯크림소스의 조화
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="burger8" onclick="buy(this);">
+              <img src="img/burger/burger8.png" />
+              <div class="menu_caption">
+                <h2>미COOK버거 6,9</h2>
+                <p>
+                  그릴에 구운 두툼한 육즙 가득 호주산 와규 수제패티<br>
+                  3대진미 트러플오일, 치즈와 양상추 토마토 정통 미국식 버거
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="burger9" onclick="buy(this);">
+              <img src="img/burger/burger9.png" />
+              <div class="menu_caption">
+                <h2>수제떡갈비버거 6,9</h2>
+                <p>
+                  백김치와 떡갈비의 조합으로 백김치의 아삭한 식감과 산미, 떡갈비의 조화
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- 음료 메뉴판 -->
+          <section class="drink">
+            <!-- 메뉴 이미지들과 설명 -->
+            <div class="menu_card" id="drink1" onclick="buy(this);">
+              <img src="img/drinks/coke.png" />
+              <div class="menu_caption">
+                <h2>콜라 2,0</h2>
+                <p>
+                  Coke
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="drink2" onclick="buy(this);">
+              <img src="img/drinks/cider.png" />
+              <div class="menu_caption">
+                <h2>사이다 2,0</h2>
+                <p>
+                  Sprite
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="drink3" onclick="buy(this);">
+              <img src="img/drinks/lemonade.png" />
+              <div class="menu_caption">
+                <h2>레몬에이드 3,5</h2>
+                <p>
+                  Lemonade
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="drink4" onclick="buy(this);">
+              <img src="img/drinks/milkshake.png" />
+              <div class="menu_caption">
+                <h2>밀크쉐이크 5,5</h2>
+                <p>
+                  Milkshake
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="drink5" onclick="buy(this);">
+              <img src="img/drinks/americano.png" />
+              <div class="menu_caption">
+                <h2>아메리카노 2,0</h2>
+                <p>
+                  Americano
+                </p>
+              </div>
+          </section>
+
+          <!-- 사이드 메뉴판 -->
+          <section class="side">
+            <!-- 메뉴 이미지들과 설명 -->
+            <div class="menu_card" id="sideMenu1" onclick="buy(this);">
+              <img src="img/sideMenu/sidemenu (1).png" />
+              <div class="menu_caption">
+                <h2>외계인오징어 3,0</h2>
+                <p>
+                  Deep Fried Alien Invader
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="sideMenu2" onclick="buy(this);">
+              <img src="img/sideMenu/sidemenu (2).png" />
+              <div class="menu_caption">
+                <h2>버팔로콤보[5ea] 3,9</h2>
+                <p>
+                  Buffalo Combo
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="sideMenu3" onclick="buy(this);">
+              <img src="img/sideMenu/sidemenu (3).png" />
+              <div class="menu_caption">
+                <h2>모짜치즈스틱 2,0</h2>
+                <p>
+                  Mozzarella Sticks<br>
+                  모짜렐라치즈
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="sideMenu4" onclick="buy(this);">
+              <img src="img/sideMenu/sidemenu (4).png" />
+              <div class="menu_caption">
+                <h2>크리스피감자튀김 2,0</h2>
+                <p>
+                  Crispy Potato Fries
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="sideMenu5" onclick="buy(this);">
+              <img src="img/sideMenu/sidemenu (5).png" />
+              <div class="menu_caption">
+                <h2>미트칠리감자튀김 3,9</h2>
+                <p>
+                  Meat Chili French Fries
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="sideMenu6" onclick="buy(this);">
+              <img src="img/sideMenu/sidemenu (6).png" />
+              <div class="menu_caption">
+                <h2>어니언치폴레감자튀김 3,7</h2>
+                <p>
+                  Onion Chipotle French Fries
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="sideMenu7" onclick="buy(this);">
+              <img src="img/sideMenu/sidemenu (7).png" />
+              <div class="menu_caption">
+                <h2>수제코우슬로 2,0</h2>
+                <p>
+                  Coleslaw with Ham<br>
+                  양배추,양파,슬라이스햄,마요네즈
+                </p>
+              </div>
+            </div>
+            <div class="menu_card" id="sideMenu8" onclick="buy(this);">
+              <img src="img/sideMenu/sidemenu (8).png" />
+              <div class="menu_caption">
+                <h2>HOT빅뱅소스 0,5</h2>
+                <p>
+                  [매운맛 1/2/3 단계 선택]
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+        <!-- 결제란 -->
+        <div class="wrapper_pay">
+          <div class="shopcart">
+          </div>
+          <div class="totalresult">
+            <div id="resultInfo">총액 : </div>
+            <div id="result">0원</div>
+          </div>
+          <div class="buttonArea">
+            <button onclick="orderRequest();" style="margin-right: 25px;"><span>주문하기</span></button>
+            <button onclick="allDelete();" style="margin-left: 25px;"><span>전체취소</span></button>
+          </div>
+        </div>
+
+        <script src="js/pricecalculate.js"></script>
+        <footer></footer>
+      </div>
+    </div>
+  </body>
+</html>

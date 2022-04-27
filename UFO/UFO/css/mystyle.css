@@ -1,0 +1,141 @@
+/*---------font import----------*/
+
+@font-face {
+    font-family: 'DB';
+    src: url("/font/debussy.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'Gms';
+    src: url("/font/GmarketSansTTFMedium.woff") format('woff');
+}
+
+body{
+    background-color: #EA0D44;
+}
+.contant{
+    margin: 0 auto;
+    width: 1350px; height: 2212px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+*{
+    color: white;
+}
+
+/*----------header------------------*/
+.header{
+    width: 1350px; height: 150px;
+}
+    .header > .logo {
+        width: 100px; width: 130px;
+        float: left;
+    }
+        .logo > img{
+            width: 130px; width: 130px;
+        }
+        .nav{
+            float: right;
+            width: 1200px; height: 100px;
+        }
+
+.topMenu{
+    height: 100px;
+    margin: 0;
+}
+    .topMenu > li{
+        float: right;
+    }
+    /* .topMenu > li:hover {
+        opacity: 1;
+    }
+        .navMenu:hover ~ .navMenu{
+            opacity: 0.2;
+        } */
+
+    .topMenu > li > a{
+        display: block;
+        font-size: 20px;
+        line-height: 110px;
+        padding: 20px 25px;
+
+        font-family: 'DB';
+    }
+
+    .topMenu > li > a:hover{
+        text-underline-offset: 15px;
+        text-decoration: 2px underline #FFC000;
+    }
+
+
+/*-----------section-----------------*/
+.section{
+    width: 1350px; height: 1950px;
+}
+
+/*----------imgSlide------------------*/
+.imgSlide{
+    width: 1350px; height: 465px;
+}
+
+/*----------slideShow------------------*/
+#slideShow img{
+    width: 1300px;
+    height: 600px;
+    margin-left: 40px;
+}
+
+/*-----------intro-----------------*/
+.intro{
+    width: 1350px; height: 92px;
+    text-align: center;
+    margin-top: 30px;
+
+    font-family: 'DB';
+}
+    .intro h1{
+        margin: 0;
+        font-size: 60px;
+    }
+.intro2{
+    width: 1200px; height: 180px;
+    text-align: center;
+    padding: 20px 75px;
+}
+    .intro2 p{
+        margin: 0;
+
+        font-size: 16px;
+        font-family: 'Gms';
+        letter-spacing: -1px;
+        line-height: 30px;
+    }
+
+/*----------------------------*/
+.imgDiv{
+    width: 1350px; height: 1105px;
+}
+    .imgDiv > img{
+        width: 350px; height: 510px;
+        float: left;
+        margin-left: 76px;
+        margin-bottom: 40px;
+    }
+
+/*----------footer------------------*/
+.footer{
+    clear: both;
+    width: 1350px;
+    margin-bottom: 30px;
+
+    
+    font-size: 10px;
+    font-family: 'Gms';
+    letter-spacing: -1px;
+    line-height: 18px;
+}
+/*----------------------------*/
