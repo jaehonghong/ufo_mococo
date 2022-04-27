@@ -1,5 +1,6 @@
 
 var total = 0;
+var totalCount = 0;
 var menu_list = {
   burger1 : { price : 3500, count : 0 },
   burger2 : { price : 6900, count : 0 },
@@ -43,10 +44,11 @@ function buy(elem){
 
     if (n.count > 0)
     {
-      items.innerHTML += "<div class='menuList'>" + "<span class='menu'>" + 
-          MenutransKO(tmp[i]) + "</span>"
-            + "<span class='amount'>" + n.count + "개" + "</span>"
-            + "<button onClick='deleteMenu(this);'>X</button>" + "</div>";
+      items.innerHTML += "<div class='menuList'>" 
+      + "<span class='menu'>" + MenutransKO(tmp[i]) + "</span>"
+      + "<span class='amount'>" + n.count + "개" + "</span>"
+      + "<span class='price'>" + (n.count * n.price) + "원" + "</span>"
+      + "<button onClick='deleteMenu(this);'>X</button>" + "</div>";
     }
   }
 
@@ -91,6 +93,7 @@ total = 0;
 document.querySelector("#result").innerHTML = 0 + "원";
 }
 
+/*
 function orderRequest(){
   let resultString = "";
 
@@ -110,6 +113,7 @@ function orderRequest(){
 
   alert(resultString);
 }
+*/
 
 function MenutransKO(product){
   let resultString = "";
@@ -263,4 +267,41 @@ function MenutransEN(product){
   }
 
   return resultString;
+}
+
+function closeTab(){
+  document.querySelector(".popupWrapper").style.boxShadow = "rgba(0, 0, 0, 0) 0 0 0 0px";
+  document.querySelector(".orderPage").style.display = "none";
+  totalCount = 0;
+  allDelete();
+}
+
+function orderRequest(){
+  location.href="#";
+  document.querySelector(".popupWrapper").style.boxShadow = "rgba(0, 0, 0, 0.6) 0 0 0 9999px";
+  document.querySelector(".orderPage").style.display = "block";
+  fillinList();
+}
+
+function fillinList(){
+  document.querySelector("#orderList").innerHTML = "";
+
+  let tmp = Object.keys(menu_list);
+  for(let i = 0; i < Object.keys(menu_list).length; i++)
+  {
+    let n = menu_list[[tmp[i]]];
+
+    if (n.count > 0)
+    {
+      totalCount += n.count;
+      document.querySelector("#orderList").innerHTML += "<p>" + 
+      "<span class='menu'>" + MenutransKO(tmp[i]) + "</span>"
+            + "<span class='amount'>" + n.count + "개" + "</span>"
+            + "<span class='price'>" + (n.count * n.price) + "원" + "</span>" + "</p>";
+    }
+  }
+
+  document.querySelector("#totalCount").innerHTML = "주문수량 : " + "<span class='setRed'>" + totalCount + "</span>" + "개";
+  document.querySelector("#totalPrice").innerHTML = "결제금액 : " + "<span class='setRed'>" + total + "</span>" + "원";
+
 }

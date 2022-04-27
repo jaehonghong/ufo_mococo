@@ -24,11 +24,10 @@
   letter-spacing: -1px;
 }
   .shopcart {
-    margin: 0 auto;
-    width: 1200px; height: 175px;
+    width: 1300px; height: 175px;
     padding: 25px 25px;
     margin-bottom: 25px;
-    background-color: rgba(255, 255, 255, 0.263);
+
     box-sizing: content-box;
 
     overflow: scroll;
@@ -47,7 +46,6 @@
 
     #resultInfo {
       float: left;
-      margin-left: 25px;
     }
 
     #result {
@@ -88,6 +86,11 @@
 
   .menuList > .amount {
     position: absolute;
+    right: 300px;
+  }
+
+  .menuList > .price {
+    position: absolute;
     right: 50px;
   }
 
@@ -98,4 +101,118 @@
     right: 0px; top: 5px;
 
     font-family: 'GmsBold';
+  }
+
+.popupWrapper {
+  position: absolute;
+  top: 50%; left: 50%;
+  margin-left: -350px;
+  margin-top: -500px;
+
+  z-index: 10;
+}
+
+.orderPage {
+  width: 700px; height: 1000px;
+  margin: 0 auto; padding: 0 20px;
+  position: relative;
+  box-sizing: border-box;
+
+  text-align: center;
+  background-color: white;
+  border: 1px solid black;
+
+  display: none;
+}
+
+  .orderPage > #title {
+    width: 698px; height: 100px;
+    line-height: 100px;
+    margin: 0; padding: 0;
+    margin-left: -20px; 
+    padding-top: 8px;
+
+    overflow: hidden;
+    
+    font-family: 'GmsBold';
+    font-size: 40px;
+
+    background-color: #EA0D44;
+    color: white;
+  }
+
+  .orderPage > #orderList {
+    width: 100%; height: 700px;
+
+    box-sizing: border-box;
+    padding: 40px 20px;
+
+    background-color: white;
+
+    font-family: 'Gms';
+    font-size: 25px;
+
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+    #orderList::-webkit-scrollbar { display: none; }
+
+    #orderList > p{
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .setRed {
+      font-size: 1.2em;
+      color: #EA0D44;
+    }
+
+      #orderList > p > .menu {
+        position: absolute;
+        left: 0px;
+      }
+    
+      #orderList > p > .amount {
+        position: absolute;
+        right: 150px;
+      }
+
+      #orderList > p > .price {
+        position: absolute;
+        right: 0px;
+      }
+
+  #totalCount {
+    height: 100px;
+    line-height: 100px;
+    margin: 0;
+    font-family: 'Gms';
+
+    float: left;
+  }
+
+  #totalPrice {
+    height: 100px;
+    line-height: 100px;
+    margin: 0;
+    font-family: 'Gms';
+
+    float: right;
+  }
+
+  .orderPage > button {
+    width: 400px; height: 60px;
+    position: absolute;
+    bottom: 0px; left: 50%;
+
+    margin: 20px 0;
+    margin-left: -200px;
+
+    padding-top: 8px;
+
+    clear: both;
+    
+    font-family: 'GmsBold';
+    font-size: 40px;
   }
