@@ -57,6 +57,7 @@ function buy(elem){
 }
 
 
+/*
 function deleteMenu(menu){
   let product = MenutransEN(menu.parentNode.firstChild.innerHTML);
 
@@ -74,6 +75,29 @@ function deleteMenu(menu){
     total -= menu_list[product].price;
   }
   menu.previousSibling.innerHTML = menu_list[product].count + "개";
+  
+  document.querySelector("#result").innerHTML = total + "원";
+}
+*/
+
+function deleteMenu(menu){
+  let product = MenutransEN(menu.parentNode.firstChild.innerHTML);
+
+  menu_list[product].count -= 1;
+
+  if(menu_list[product].count < 0)
+  {
+    menu_list[product].count = 0;
+  }
+  else if(menu_list[product].count == 0) {
+    menu.parentNode.remove();
+    total -= menu_list[product].price;
+  }
+  else {
+    total -= menu_list[product].price;
+  }
+  menu.previousSibling.innerHTML = menu_list[product].count * menu_list[product].price + "원";
+  menu.previousSibling.previousSibling.innerHTML = menu_list[product].count + "개";
   
   document.querySelector("#result").innerHTML = total + "원";
 }
